@@ -19,7 +19,7 @@ var scores, roundScores, activePlayer, gamePlaying;
 var x = document.querySelector('#score-0').textContent;
 */
 
-
+init();
 
 var diceDOM = document.querySelector('.dice');
 
@@ -58,8 +58,16 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
         // Update UI
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
-        // check if player won the game
-        if (scores[activePlayer] >= 20) {
+        var input = document.querySelector('input').value;
+        var winningScore;
+        
+        if (input) {
+            winningScore = input;
+        } else {
+            winningScore = 100;
+        }
+        
+        if (scores[activePlayer] >= winningScore) {
             diceDOM.style.display = 'none';
             document.getElementById('name-' + activePlayer).textContent = 'WINNER!';
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');

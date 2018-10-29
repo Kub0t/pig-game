@@ -57,7 +57,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 100;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 10px;
     position: relative;
 }
@@ -67,7 +67,7 @@ body {
     font-size: 80px;
     font-weight: 100;
     color: #EB4D4D;
-    margin-bottom: 130px;
+    margin-bottom: 110px;
 }
 
 .active { background-color: #f7f7f7; }
@@ -152,3 +152,28 @@ i {
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+.score-set {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+}
+
+input {
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: none;
+    margin-left: 5px;
+    width: 60px;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
